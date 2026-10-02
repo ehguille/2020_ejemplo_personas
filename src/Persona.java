@@ -3,16 +3,18 @@ public class Persona {
 	
 	private String nombre, apellidos;
 	private int edad;
+	private Cabeza unaCabeza;
 	
 	/*
 	 * public Persona() {
 	 * }
 	 */
 	
-	public Persona() {
-		nombre="Marisa";
-		apellidos="González";
-		edad=23;
+	public Persona(String nombrePersona, String apellidosPersona, int edadPersona, int numeroOjos) {
+		nombre=nombrePersona;
+		apellidos=apellidosPersona;
+		edad=edadPersona;
+		unaCabeza=new Cabeza(numeroOjos);
 		System.out.println("Se crea una persona.");
 	}
 	
@@ -26,6 +28,10 @@ public class Persona {
 	
 	public String getApellidos() {
 		return apellidos;
+	}
+	
+	public int getEdad() {
+		return edad;
 	}
 	
 	public void imprimirNombre() {
